@@ -1,27 +1,17 @@
 services:
   alpha:
     build: "./alpha"
-    networks:
-      - myprojectnetwork
     ports:
       - "8080:80"
 
   beta:
     build: "./beta"
-    networks:
-      - myprojectnetwork
     ports:
       - "8081:80"
 
-  gamma:
-    build: "./pictures"
-    networks:
-      - myprojectnetwork
-    ports:
-      - "8082:80"
-
-networks:
-  myprojectnetwork:
-
-volumes:
-  - images
+  # gamma:
+  #   build: "./pictures"
+  #   # networks:
+  #   #   - myprojectnetwork
+  #   ports:
+  #     - "8082:80"
