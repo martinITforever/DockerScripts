@@ -3,13 +3,20 @@ services:
     build: "./alpha"
     ports:
       - "8080:80"
+    volumes:
+      - stored_images:/usr/share/nginx/html/images
 
   beta:
     build: "./beta"
     ports:
       - "8081:80"
+    volumes:
+      - stored_images:/usr/share/nginx/html/images
 
-  gamma:
-    build: "./gamma"
-    ports:
-      - "8082:80"
+  shared-volume:
+    build: "./shared-volume"
+    volumes:
+      - stored_images:/data/images
+
+volumes:
+  stored_images:
