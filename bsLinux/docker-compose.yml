@@ -9,9 +9,7 @@ services:
     ports:
       - "8081:80"
 
-  # gamma:
-  #   build: "./pictures"
-  #   # networks:
-  #   #   - myprojectnetwork
-  #   ports:
-  #     - "8082:80"
+  gamma:
+    build: "./gamma"
+    ports:
+      - "8082:80"
