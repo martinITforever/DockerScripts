@@ -6,6 +6,11 @@ Es enthält zudem eine Dockerfile, die ein Docker-Volume erzeugt und eine CSS-Da
 Bei Bau der Images werden 2 im Projekt enthaltene Bilder (.jpg) in das Volume kopiert.
 Beide Websites können sich gegenseitig aufrufen über einen Link.
 Beide Websites enthalten zudem Links, die zu jeweils einer der beiden Bildateien führen.
+## Services
+Image Alpha und Image Beta nutzen den Webserver nginx mit der Version 1.27 als Basis.
+In den Webservern beider Images wird der Port 80 geöffnet, um von außen erreichbar zu sein.
+Im Image shared-volume wird das Linux-System alpine mit der neuesten Version als Basis verwendet.
+Darin wird das Volume erzeugt, welches die beiden .jpg-Dateien enthält.
 ## Kurzanleitung:
 - Installiere Docker.
 - Starte die Docker-Engine.
